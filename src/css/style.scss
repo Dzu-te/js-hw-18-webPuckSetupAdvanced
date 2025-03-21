@@ -1,0 +1,26 @@
+@use "fonts";
+
+$primary-color: rgb(171, 135, 57);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $primary-color;
+}
+
+.fav{
+  background-image: url('../../favicon.png');
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.container h1{
+font-family: 'Advent Pro', sans-serif;
+}
