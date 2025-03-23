@@ -7,19 +7,32 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --open",
+     "analyze": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json dist/"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
+    "babel-loader": "^10.0.0",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^13.0.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
+    "eslint-webpack-plugin": "^5.0.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
     "sass": "^1.86.0",
     "sass-loader": "^16.0.5",
-    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.14",
     "webpack": "^5.98.0",
-    "webpack-cli": "^6.0.1"
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   }
 }

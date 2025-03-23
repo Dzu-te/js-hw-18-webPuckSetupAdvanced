@@ -4,18 +4,15 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
-    <title>Webpack training</title>
-    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
 
   <body>
-    <!-- <div class="fav"></div> -->
-<!-- <img src="./assets/icon-square-big.png" alt="icon-square-big" width="50px"> -->
-<!-- <div class="container">
-  <h1>Webpack training!!!</h1>
-</div> -->
+    
     <%= require ('html-loader!./partials/header.html').default %> 
     <%= require ('html-loader!./partials/main.html').default%> 
     <%= require ('html-loader!./partials/footer.html').default %>
+    
   </body>
 </html>
